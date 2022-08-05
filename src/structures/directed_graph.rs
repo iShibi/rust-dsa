@@ -77,4 +77,17 @@ mod tests {
         assert_eq!(graph.get_neighbors(2), vec![4, 5]);
         assert_eq!(graph.get_neighbors(3), vec![]);
     }
+
+    #[test]
+    fn it_contains_node() {
+        let mut graph = DirectedGraph::new();
+        graph
+            .add_edge(1, 2)
+            .add_edge(1, 3)
+            .add_edge(2, 4)
+            .add_edge(2, 5);
+
+        assert_eq!(graph.contains_node(1), true);
+        assert_eq!(graph.contains_node(6), false);
+    }
 }

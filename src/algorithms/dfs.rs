@@ -18,9 +18,8 @@ pub fn dfs(graph: DirectedGraph, start_node: i32) -> Vec<i32> {
 
 #[cfg(test)]
 mod tests {
-    use crate::structures::directed_graph::DirectedGraph;
-
     use super::dfs;
+    use crate::structures::directed_graph::DirectedGraph;
 
     #[test]
     fn it_performs_dfs() {
